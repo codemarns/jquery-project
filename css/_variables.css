@@ -11,6 +11,8 @@
   --primary-100: #F5F5F5;
   --primary-50: #FAFAFA;
 
+  --accent-500: greenyellow;
+
   --dark-theme: dark;
   --dark-theme-primary-color-1: var(--primary-950);
   --dark-theme-primary-color-2: var(--primary-900);

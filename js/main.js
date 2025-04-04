@@ -138,17 +138,21 @@ $(document).ready(function() {
         "submenu": []
       },
       {
-        "name": "About",
-        "link": "about.html",
+        "name": "Attributes",
+        "link": "attributes.html",
         "submenu": [
           {
-            "name": "Our Story",
-            "link": "our-story.html"
+            "name": ".addClass()",
+            "link": "#add-class"
           },
           {
-            "name": "Our Company",
-            "link": "our-company.html"
+            "name": ".attr()",
+            "link": "#attr"
           }
+          // {
+          //   "name": "Our Company",
+          //   "link": "our-company.html"
+          // }
         ]
       },
       {
