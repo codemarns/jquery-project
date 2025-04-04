@@ -128,10 +128,61 @@ $(document).ready(function() {
     }
   });
 
-  // NAVIGATION
+  
+  // DYNAMIC NAV MENU
+  const menuData = {
+    "menu": [
+      {
+        "name": "Home",
+        "link": "index.html",
+        "submenu": []
+      },
+      {
+        "name": "About",
+        "link": "about.html",
+        "submenu": [
+          {
+            "name": "Our Story",
+            "link": "our-story.html"
+          },
+          {
+            "name": "Our Company",
+            "link": "our-company.html"
+          }
+        ]
+      },
+      {
+        "name": "Blog",
+        "link": "blog.html",
+        "submenu": [
+          {
+            "name": "Tech Blog",
+            "link": "tech-blog.html"
+          }
+        ]
+      }
+    ]
+  };
+  const menuContainer = $("#side-menu");
+  menuData.menu.forEach(function(item) {
+    let listItem = `<li><a id="nav-link" href="${item.link}">${item.name}</a></li>`;
+
+    if (item.submenu.length > 0) {
+      listItem += `<ul class="submenu">`;
+      item.submenu.forEach(function(subItem) {
+        listItem += `<li><a id="nav-link" href="${subItem.link}">${subItem.name}</a></li>`;
+      });
+      listItem += `</ul>`;
+    }
+
+    listItem += `</li>`;
+    menuContainer.append(listItem);
+  });
+
+  // NAVIGATION MENU
   var currentPage = window.location.pathname.split("/").pop();
   // Loop through each navigation link
-  $("#side-nav a").each(function() {
+  $("#side-menu a").each(function() {
     if ($(this).attr("href") === currentPage) {
       $(this).addClass("active");
     }
