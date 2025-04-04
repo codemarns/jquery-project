@@ -87,7 +87,7 @@ $(document).ready(function() {
     $(this).text(currentText === "Close Menu" ? "Open Menu" : "Close Menu")
 
     if (toggleMenuTrigger === true) {
-      $("#side-menu").animate({
+      $("#side-nav").animate({
         left: 0,
         opacity: 1
       });
@@ -107,7 +107,7 @@ $(document).ready(function() {
       toggleMenuTrigger = false;
     }
     else if (toggleMenuTrigger === false) {
-      $("#side-menu").animate({
+      $("#side-nav").animate({
         left: "-16rem",
         opacity: 0
       });
@@ -125,6 +125,15 @@ $(document).ready(function() {
       });
       
       toggleMenuTrigger = true;
+    }
+  });
+
+  // NAVIGATION
+  var currentPage = window.location.pathname.split("/").pop();
+  // Loop through each navigation link
+  $("#side-nav a").each(function() {
+    if ($(this).attr("href") === currentPage) {
+      $(this).addClass("active");
     }
   });
 

@@ -60,6 +60,19 @@ nav {
   border-right-color: var(--dark-theme-primary-color-3);
 }
 
+nav li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav li a:hover {
+  text-decoration: solid underline;
+}
+
+nav li a.active {
+  color: greenyellow;
+}
+
 main, footer {
   margin-left: 16rem;
   width: calc(100% - 16rem);
