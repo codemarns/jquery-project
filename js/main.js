@@ -143,11 +143,11 @@ $(document).ready(function() {
         "submenu": [
           {
             "name": ".addClass()",
-            "link": "#add-class"
+            "link": "attributes.html#add-class"
           },
           {
             "name": ".attr()",
-            "link": "#attr"
+            "link": "attributes.html#attr"
           }
           // {
           //   "name": "Our Company",
@@ -195,4 +195,14 @@ $(document).ready(function() {
   // GET CURRENT YEAR
   let currentYear = new Date().getFullYear();
   $("#year").text(currentYear);
+
+  // .addClass()
+  $("#add-classname").click(function() {
+    $("#content-box").addClass("border-color-green");
+  });
+
+  $("#remove-classname").click(function() {
+    $("#content-box").removeClass("border-color-green");
+  });
+  
 });

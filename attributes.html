@@ -23,15 +23,22 @@
   </nav>
 
   <main id="main-content">
-    <h1>About page!</h1>
-
-    <section id="add-class" class="attr-section">
-      <h3><code>.addClass()</code></h3>
-    </section>
-
-    <section id="attr" class="attr-section">
-      <h3><code>.attr()</code></h3>
-    </section>
+    <div class="container">
+      <h1>About page!</h1>
+  
+      <section id="add-class" class="attr-section space-y-4">
+        <h3><code>.addClass()</code></h3>
+        <div class="content">
+          <button id="add-classname">Add Class</button>
+          <div id="content-box" class="box"></div>
+          <button id="remove-classname">Remove Class</button>
+        </div>
+      </section>
+  
+      <section id="attr" class="attr-section space-y-4">
+        <h3><code>.attr()</code></h3>
+      </section>
+    </div>
   </main>
 
   <footer>© <span id="year"></span> Powered by codemarns</footer>
